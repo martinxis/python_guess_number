@@ -12,10 +12,7 @@ def game():
         if answer not in {"higher", "lower", "correct"}:
             print("Please enter 'higher', 'lower' or 'correct': ")
         elif answer == "correct":
-                if guesses_needed == 1:
-                    guess_text = "guess."
-                else: 
-                    guess_text = "guesses."
+                guess_text = "guess." if guesses_needed == 1 else "guesses."
                 print(f"Great! I guessed your number {guess} with {guesses_needed} {guess_text}")
         elif answer == "higher":
             low = guess + 1
